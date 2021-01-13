@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div *ngFor="let card of cards">
+        <div class="container" (click)="geklickt($event)">
+            <div class="card" [@cardFlip]="card.state">
+                <div class="face back">
+                    <img src="../assets/hg_1.png" [id]="card.id" />
+                </div>
+                <div class="face front">
+                    <img [src]="card.path" [id]="card.id" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="count">
+        <h1>{{punkte}} <br> Strafpunkte</h1>
+    </div>
+
+</body>
+</html>

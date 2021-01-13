@@ -1,0 +1,61 @@
+body {
+    transform: scale(0.8);
+}
+
+h1 {
+    position: absolute;
+    left: auto;
+    right: 0vh;
+    top: 50vh;
+    font-family: Arial;
+    text-align: center;
+    
+}
+ 
+ .card {
+    perspective: 1000px;
+    width: 200px; 
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    margin: 5px;
+    float: left;
+    box-shadow: 10px 10px 20px -18px rgba(0, 0, 0, 0.75);
+ }
+
+ .face {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+ }
+ .no-hide .face {
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+    -o-backface-visibility: visible;
+    backface-visibility: visible;
+ }
+ .back {
+    z-index: 10;
+ }
+ .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+ }
+
+ img {
+    border: white;
+    border-radius: 5px;
+ }
